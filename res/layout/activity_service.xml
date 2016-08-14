@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".ServiceActivity" >
+
+    <Button
+        android:id="@+id/btn_brake"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_oil"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="@string/lancer_brake" />
+
+    <Button
+        android:id="@+id/btn_wheel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_brake"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="@string/lancer_wheel" />
+
+    <Button
+        android:id="@+id/btn_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_wheel"
+        android:layout_below="@+id/btn_belt"
+        android:onClick="onClick"
+        android:text="@string/lancer_price" />
+
+    <Button
+        android:id="@+id/btn_belt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_wheel"
+        android:layout_below="@+id/btn_wheel"
+        android:onClick="onClick"
+        android:text="@string/lancer_belt" />
+
+    <Button
+        android:id="@+id/btn_oil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_brake"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="45dp"
+        android:onClick="onClick"
+        android:text="@string/lancer_oil" />
+
+    <Button
+        android:id="@+id/btn_directory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_price"
+        android:layout_below="@+id/btn_price"
+        android:onClick="onClickBtnDirectory"
+        android:text="@string/menuDirectory" />
+
+    <TextView
+        android:id="@+id/txtService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="41dp"
+        android:text="@string/title_activity_service"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>

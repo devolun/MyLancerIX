@@ -1,0 +1,30 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mylancerix.DirectoryActivity" >
+
+    <item
+        android:id="@+id/menuService"
+        android:orderInCategory="100"
+        android:title="@string/title_activity_service"/>
+    <item
+        android:id="@+id/menuSettings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings">
+    </item>
+    <item
+        android:id="@+id/menuAbout"
+        android:orderInCategory="100"
+        android:title="@string/menuAbout">
+    </item>
+    <item
+        android:id="@+id/menuExit"
+        android:orderInCategory="100"
+        android:title="@string/menuExit">
+    </item>
+
+</menu>
+
+
+
+
