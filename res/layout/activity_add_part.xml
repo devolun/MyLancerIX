@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
+    
+	<EditText
+		android:id="@+id/nameOfPartAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="29dp"
+            android:ems="10"
+            android:hint="@string/hint_name_of_part"
+            android:inputType="textCapWords"
+            android:maxLines="1" >
+
+            <requestFocus />
+        </EditText>
+
+	    <EditText
+	        android:id="@+id/oldChangeAdd"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/nameOfPartAdd"
+	        android:layout_below="@+id/nameOfPartAdd"
+	        android:layout_marginTop="36dp"
+	        android:ems="10"
+	        android:hint="@string/hint_old_change"
+	        android:inputType="number"
+	        android:maxLines="1"/>
+
+	    <EditText
+	        android:id="@+id/serviceChangeAdd"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/oldChangeAdd"
+	        android:layout_below="@+id/oldChangeAdd"
+	        android:layout_marginTop="24dp"
+	        android:ems="10"
+	        android:hint="@string/hint_service_change"
+	        android:inputType="number"
+	        android:maxLines="1" />
+
+		<EditText
+	        android:id="@+id/catalogeNameOfPartAdd"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/serviceChangeAdd"
+	        android:layout_below="@+id/serviceChangeAdd"
+	        android:layout_marginTop="27dp"
+	        android:ems="10"
+	        android:hint="@string/hint_cataloge_part_name"
+	        android:inputType="textCapWords"
+	        android:maxLines="1" />
+
+		<Button
+		    android:id="@+id/buttonAddNewPart"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@+id/catalogeNameOfPartAdd"
+		    android:layout_centerHorizontal="true"
+		    android:layout_marginTop="64dp"
+		    android:onClick="onClick"
+		    android:text="@string/add_part" />
+
+</RelativeLayout>

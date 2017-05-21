@@ -1,77 +1,63 @@
 package com.mylancerix;
 
-import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.mylancerix.adapter.DirectoryPartsAdapter;
-import com.mylancerix.pojo.DirectoryParts;
+import com.mylancerix.pojo.Part;
 
 public class DirectoryActivity extends Activity {
 	
+	private DBManager dbManager;
 	private ListView directoryList;
-
-	private List<DirectoryParts> initData() {
-		List<DirectoryParts> list = new ArrayList<DirectoryParts>();
-		list.add(new DirectoryParts("Колодки", "WZTG56784"));
-		list.add(new DirectoryParts("Масло", "3717610"));
-		list.add(new DirectoryParts("Диски", "LSD833G56784"));
-		list.add(new DirectoryParts("Диски тормозные передние", ""));
-		list.add(new DirectoryParts("Диски тормозные задние", ""));
-		list.add(new DirectoryParts("Диски сцепления", ""));
-		list.add(new DirectoryParts("Корзина сцепления", ""));
-		list.add(new DirectoryParts("Ремень ГРМ", "UKSG56784"));
-		list.add(new DirectoryParts("Резина", "WZTG56784"));
-		list.add(new DirectoryParts("Фильтр воздушный", ""));
-		list.add(new DirectoryParts("Фильтр масляный", ""));
-		list.add(new DirectoryParts("Фильтр салона", ""));
-
-		return list;
-	}
-	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_directory);
 		
-		directoryList = (ListView) findViewById(R.id.directory_listView);
-		DirectoryPartsAdapter adapter = new DirectoryPartsAdapter(this, initData());
-		directoryList.setAdapter(adapter);
-		
-		
-		directoryList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-			
-			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				
-//				Toast.makeText(getApplicationContext(), "itemClick: position = " +
-//						position + ", id = " + id + ", " + parent.getAdapter().getItem(position),
-//						Toast.LENGTH_LONG).show();
-				
+		dbManager = new DBManager(this);
+		dbManager.open();
 
-				Toast.makeText(getApplicationContext(), "itemClick: position = " +
-						position + ", id = " + id,
-						Toast.LENGTH_LONG).show();
-				
+        List<Part> values = dbManager.getAllParts();
+        
+		Collections.sort(values, new Comparator<Part>() {
+			public int compare(Part o1, Part o2) {
+				return o1.toString().compareTo(o2.toString());
 			}
 		});
+
 		
+        ArrayAdapter<Part> adapter = new ArrayAdapter<Part>(this, android.R.layout.simple_list_item_multiple_choice, values);
+		directoryList = (ListView) findViewById(R.id.directory_listView);
+		directoryList.setAdapter(adapter);
+		
+		directoryList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+				Toast.makeText(getApplicationContext(), "itemClick: position = " + position + 
+						", id = " + id + " " + 
+						"Деталь " + parent.getAdapter().getItem(position),
+						Toast.LENGTH_LONG).show();
+			}
+		});
 
 	}
 	
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.directory, menu);
 		return true;
 	}
@@ -104,6 +90,5 @@ public class DirectoryActivity extends Activity {
 
 		return super.onMenuItemSelected(featureId, item);
 	}
-	
 	
 }

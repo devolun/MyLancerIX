@@ -26,23 +26,24 @@ public class AboutActivity extends Activity {
 		switch (item.getItemId()) {
 
 		case R.id.menuService:
-			startActivity(new Intent(getApplicationContext(),
-					ServiceActivity.class));
+			startActivity(new Intent(getApplicationContext(), ServiceActivity.class));
 			break;
 
 		case R.id.menuDirectory:
-			startActivity(new Intent(getApplicationContext(),
-					DirectoryActivity.class));
+			startActivity(new Intent(getApplicationContext(), DirectoryActivity.class));
 			break;
-
+			
 		case R.id.menuSettings:
-			startActivity(new Intent(getApplicationContext(),
-					SettingsActivity.class));
+			startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
 			break;
-
+			
+		case R.id.menuAbout:
+			startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+			break;
+		
 		case R.id.menuExit:
-			finish();
-			System.exit(0);
+            finish();
+            System.exit(0);
 			break;
 
 		default:

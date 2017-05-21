@@ -3,16 +3,26 @@ package com.mylancerix;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
+
 
 public class SettingsActivity extends Activity {
+	
+	DatabaseHelper dbHelper;
+	
 
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_settings);
+
+		dbHelper = new DatabaseHelper(this);  //создаем доступ к базе
 	}
+	
 	
 	
 	@Override
@@ -53,7 +63,13 @@ public class SettingsActivity extends Activity {
 	}
 
 	
-
+	public void onClick(View v) {
+		
+		SQLiteDatabase database = dbHelper.getWritableDatabase();
+	}
+	
+	
+	
 	
 
 }

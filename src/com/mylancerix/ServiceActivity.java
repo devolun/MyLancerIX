@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
+
 public class ServiceActivity extends Activity implements OnClickListener {
 	
 	    private Button btnOil;
@@ -25,7 +26,9 @@ public class ServiceActivity extends Activity implements OnClickListener {
 	    private int oilNextСhange;
 	    
 	  
-
+  
+	    
+	    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -71,6 +74,10 @@ public class ServiceActivity extends Activity implements OnClickListener {
 	public boolean onMenuItemSelected(int featureId, MenuItem item) {
 		switch (item.getItemId()) {
 
+		case R.id.menuService:
+			startActivity(new Intent(getApplicationContext(), ServiceActivity.class));
+			break;
+
 		case R.id.menuDirectory:
 			startActivity(new Intent(getApplicationContext(), DirectoryActivity.class));
 			break;
@@ -79,9 +86,13 @@ public class ServiceActivity extends Activity implements OnClickListener {
 			startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
 			break;
 			
+		case R.id.menuAbout:
+			startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+			break;
+		
 		case R.id.menuExit:
-			finish();
-	//		System.exit(0);
+            finish();
+            System.exit(0);
 			break;
 
 		default:
@@ -97,10 +108,12 @@ public class ServiceActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.btn_oil:
+
 			txtService.setText("Замена масла каждые " + oilСhange + " км."
 					+ "\nВаша последняя замена " + oilOldСhange
 					+ "\nСледующая замена " + oilNextСhange + " км");
 			break;
+
 		case R.id.btn_brake:
 			txtService.setText("Text is Brake service show");
 			break;
@@ -118,7 +131,6 @@ public class ServiceActivity extends Activity implements OnClickListener {
 			break;
 		}
 	}
-	
 	
 
 }

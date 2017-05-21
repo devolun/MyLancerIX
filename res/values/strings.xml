@@ -1,25 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">MyLancerIX</string>
-    <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="app_welcome_title">Welcome in MyLancerIX</string>
-    <string name="app_welcome">This application will be an indispensable tool in your\nMitsubishi Lancer IX</string>
-    <string name="title_activity_service">Service</string>
-    <string name="lancer_belt">Belt</string>
-    <string name="lancer_brake">Brakes</string>
-    <string name="lancer_oil">Oil</string>
-    <string name="lancer_wheel">Tires</string>
-    <string name="lancer_price">Prices</string>
-    <string name="service_activty_name">Service MyLanserIX</string>
-    <string name="title_activity_settings">Settings</string>
-    <string name="title_activity_directory">Directory</string>
-    <string name="menuDirectory">Directory</string>
-    <string name="menuAbout">About</string>
-    <string name="title_about">About the MyLancerIX</string>
-    <string name="menuExit">Exit</string>
-    <string name="req_db">Querying the database</string>
-    <string name="author">MyLancerIX \nby Yevhen Nenko</string>
+	<string name="app_name">MyLancerIX</string>
+	<string name="action_settings">Settings</string>
+	<string name="hello_world">Hello world!</string>
+	<string name="app_welcome_title">Welcome in MyLancerIX</string>
+	<string name="app_welcome">This application will be an indispensable tool in your Mitsubishi Lancer IX</string>
+	<string name="title_activity_service">Service</string>
+	<string name="title_activity_settings">Settings</string>
+	<string name="title_activity_directory">Directory</string>
+	<string name="title_parts">Parts</string>
+	<string name="title_about">About the MyLancerIX</string>
+	<string name="title_add_part">Add your new Part</string>
+	<string name="lancer_belt">Belt</string>
+	<string name="lancer_brake">Brakes</string>
+	<string name="lancer_oil">Oil</string>
+	<string name="lancer_wheel">Tires</string>
+	<string name="lancer_price">Prices</string>
+	<string name="service_activty_name">Service MyLanserIX</string>
+
+	<string name="menuDirectory">Directory</string>
+	<string name="menuAbout">About</string>
+	<string name="menuAddPart">Add Part</string>
+	<string name="menuParts">Parts</string>
+	<string name="menuExit">Exit</string>
+    
+	<string name="empty_list_text">Empty list text</string>
+	<string name="enter_title">Text enter title</string>
+	<string name="enter_desc">Edit this id please maybe service change</string>
+	<string name="btn_update">Yes this is btn update</string>
+	<string name="btn_delete">And this is btn delete</string>
+	<string name="add_record">And BTN record</string>
+    
+	<string name="hint_name_of_part">Name of Part</string>
+	<string name="hint_cataloge_part_name">Cataloge Part Name</string>
+	<string name="hint_service_change">Service Change</string>
+	<string name="hint_old_change">Old Change</string>
+
+	<string name="add_part">Add New Part</string>
+	<string name="req_db">Querying the database</string>
+	<string name="author">MyLancerIX \nby Yevhen Nenko\n2017</string>
 
 </resources>

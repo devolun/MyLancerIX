@@ -3,6 +3,9 @@
     package="com.mylancerix"
     android:versionCode="1"
     android:versionName="1.0" >
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -37,6 +40,14 @@
         <activity
             android:name=".AboutActivity"
             android:label="@string/title_about" >
+        </activity>
+         <activity
+            android:name=".AddPartActivity"
+            android:label="@string/title_add_part" >
+        </activity>       
+        <activity
+            android:name=".PartsDataTest"
+            android:label="@string/title_parts" >
         </activity>
     </application>
 
