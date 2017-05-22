@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-
 public class ServiceActivity extends Activity implements OnClickListener {
 	
 	    private Button btnOil;
@@ -24,10 +23,7 @@ public class ServiceActivity extends Activity implements OnClickListener {
 	    private int oil—hange;
 	    private int oilOld—hange;
 	    private int oilNext—hange;
-	    
-	  
-  
-	    
+
 	    
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +51,6 @@ public class ServiceActivity extends Activity implements OnClickListener {
 	}
 	
 	
-	
 	public void onClickBtnDirectory(View view) {
 		startActivity(new Intent (getApplicationContext(), DirectoryActivity.class));
 	}
@@ -67,7 +62,6 @@ public class ServiceActivity extends Activity implements OnClickListener {
         getMenuInflater().inflate(R.menu.service, menu);
         return true;
     }
-
 
 	
 	@Override
@@ -89,6 +83,10 @@ public class ServiceActivity extends Activity implements OnClickListener {
 		case R.id.menuAbout:
 			startActivity(new Intent(getApplicationContext(), AboutActivity.class));
 			break;
+			
+		case R.id.menuAddPart:
+			startActivity(new Intent(getApplicationContext(), AddPartActivity.class));
+			break;
 		
 		case R.id.menuExit:
             finish();
@@ -101,7 +99,6 @@ public class ServiceActivity extends Activity implements OnClickListener {
 
 		return super.onMenuItemSelected(featureId, item);
 	}
-	
 	
 
 	@Override

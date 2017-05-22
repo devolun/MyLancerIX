@@ -34,7 +34,6 @@ public class MainActivity extends Activity {
     
     public void onClick(View view) {
         
-    	
     	Cursor cursor = database.query("service", new String[] {DatabaseHelper.PART_NAME_COLUMN, DatabaseHelper.PART_CATALOG_COLUMN,
                         DatabaseHelper.PART_SERVICE_CHANGE_COLUMN, DatabaseHelper.PART_OLD_CHANGE_COLUMN, DatabaseHelper.PART_NEXT_CHANGE_COLUMN},
                 null, null,
@@ -54,8 +53,8 @@ public class MainActivity extends Activity {
         
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setTitle(partName)
-				.setMessage("Следующая замена на пробеге: " + nextChange + " км." + "\nCataloge ID: " + partCatalog 
-						+ "\nЗамена каждые " + serviceChange + " km")
+				.setMessage(R.string.next_change_for + nextChange + " км." + "\nCataloge ID: " + partCatalog 
+						+ "\n"+ R.string.change_for + serviceChange + " km")
 		//		.setIcon(R.drawable.ic_android_cat)
 				.setCancelable(false)
 				.setNegativeButton("ОК",
@@ -74,7 +73,6 @@ public class MainActivity extends Activity {
 ////				+ " последняя замена "
 ////				+ oldChange + "\nследующая замена на пробеге: " + nextChange);
 //
-//        // не забываем закрывать курсор
         cursor.close();
     }
     

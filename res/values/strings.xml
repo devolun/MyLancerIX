@@ -31,6 +31,8 @@
 	<string name="btn_update">Yes this is btn update</string>
 	<string name="btn_delete">And this is btn delete</string>
 	<string name="add_record">And BTN record</string>
+	<string name="next_change_for">Следующая замена на пробеге: </string>
+	<string name="change_for">Замена каждые: </string>
     
 	<string name="hint_name_of_part">Name of Part</string>
 	<string name="hint_cataloge_part_name">Cataloge Part Name</string>

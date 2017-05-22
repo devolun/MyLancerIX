@@ -1483,8 +1483,9 @@ containing a value of this type.
         public static final int about=0x7f0c0000;
         public static final int directory=0x7f0c0001;
         public static final int main=0x7f0c0002;
-        public static final int service=0x7f0c0003;
-        public static final int settings=0x7f0c0004;
+        public static final int parts=0x7f0c0003;
+        public static final int service=0x7f0c0004;
+        public static final int settings=0x7f0c0005;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1528,24 +1529,25 @@ containing a value of this type.
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int action_settings=0x7f0a0010;
-        public static final int add_part=0x7f0a002f;
+        public static final int add_part=0x7f0a0031;
         public static final int add_record=0x7f0a002a;
         public static final int app_name=0x7f0a000f;
         public static final int app_welcome=0x7f0a0013;
         public static final int app_welcome_title=0x7f0a0012;
-        public static final int author=0x7f0a0031;
+        public static final int author=0x7f0a0033;
         public static final int black=0x7f0a000e;
         public static final int btn_delete=0x7f0a0029;
         public static final int btn_update=0x7f0a0028;
+        public static final int change_for=0x7f0a002c;
         public static final int empty_list_text=0x7f0a0025;
         public static final int enter_desc=0x7f0a0027;
         public static final int enter_title=0x7f0a0026;
         public static final int grey=0x7f0a000d;
         public static final int hello_world=0x7f0a0011;
-        public static final int hint_cataloge_part_name=0x7f0a002c;
-        public static final int hint_name_of_part=0x7f0a002b;
-        public static final int hint_old_change=0x7f0a002e;
-        public static final int hint_service_change=0x7f0a002d;
+        public static final int hint_cataloge_part_name=0x7f0a002e;
+        public static final int hint_name_of_part=0x7f0a002d;
+        public static final int hint_old_change=0x7f0a0030;
+        public static final int hint_service_change=0x7f0a002f;
         public static final int lancer_belt=0x7f0a001a;
         public static final int lancer_brake=0x7f0a001b;
         public static final int lancer_oil=0x7f0a001c;
@@ -1556,7 +1558,8 @@ containing a value of this type.
         public static final int menuDirectory=0x7f0a0020;
         public static final int menuExit=0x7f0a0024;
         public static final int menuParts=0x7f0a0023;
-        public static final int req_db=0x7f0a0030;
+        public static final int next_change_for=0x7f0a002b;
+        public static final int req_db=0x7f0a0032;
         public static final int service_activty_name=0x7f0a001f;
         public static final int title_about=0x7f0a0018;
         public static final int title_activity_directory=0x7f0a0016;

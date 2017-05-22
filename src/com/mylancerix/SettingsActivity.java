@@ -12,7 +12,6 @@ import android.database.sqlite.SQLiteDatabase;
 public class SettingsActivity extends Activity {
 	
 	DatabaseHelper dbHelper;
-	
 
 	
 	@Override
@@ -20,9 +19,8 @@ public class SettingsActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_settings);
 
-		dbHelper = new DatabaseHelper(this);  //создаем доступ к базе
+		dbHelper = new DatabaseHelper(this);  //create pull for database
 	}
-	
 	
 	
 	@Override
@@ -31,7 +29,6 @@ public class SettingsActivity extends Activity {
 		getMenuInflater().inflate(R.menu.directory, menu);
 		return true;
 	}
-	
 	
 	
 	@Override
@@ -67,10 +64,6 @@ public class SettingsActivity extends Activity {
 		
 		SQLiteDatabase database = dbHelper.getWritableDatabase();
 	}
-	
-	
-	
-	
 
 }
 
