@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -81,25 +82,28 @@ public class AddPartActivity extends Activity {
 			serviceChange.setText("");
 			textCatalogeNameOfPart.setText("");
 
-			AlertDialog.Builder builder = new AlertDialog.Builder(
-					AddPartActivity.this);
+			AlertDialog.Builder builder = new AlertDialog.Builder(AddPartActivity.this);
 			builder.setTitle(nameOfPart)
 					.setMessage(nameOfPart + " Added!")
 					// .setIcon(R.drawable.ic_android_cat)
 					.setCancelable(false)
 					.setNegativeButton("Œ ",
-							new DialogInterface.OnClickListener() {
-								public void onClick(DialogInterface dialog,
-										int id) {
+							new DialogInterface.OnClickListener() {public void onClick(DialogInterface dialog,int id) {
 									dialog.cancel();
 								}
 							});
 			AlertDialog alert = builder.create();
 			alert.show();
-
-			startActivity(new Intent(getApplicationContext(),PartsDataTest.class));
-
+			
 		}
+		
+	      new Handler().postDelayed(new Runnable() {
+	            @Override
+	            public void run() {
+	    	  		startActivity(new Intent(getApplicationContext(),PartsDataTest.class));	
+	            }
+	        }, 3000);
+		
 
 	}
 
